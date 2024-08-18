@@ -36,7 +36,21 @@ namespace BasicCsharpPgm
             // Output the result
             //Console.WriteLine($"The sum of {num1} and {num2} is: {result}");
             CsharpMethods obj= new CsharpMethods();
-          
+            CsharpMethods.ShowMessage();
+
+            // Call Add method with just one required parameter
+            int result1 = obj.ChkSum(5); // b and c will take the default values 0
+
+            // Call Add method with two parameters
+            int result2 = obj.Add(5, 10); // c will take the default value 0
+
+            // Call Add method with all three parameters
+            int result3 = obj.ChkSum(5, 10, 15);
+
+            // Display the results
+            Console.WriteLine($"Result1: {result1}"); // Output: 5
+            Console.WriteLine($"Result2: {result2}"); // Output: 15
+            Console.WriteLine($"Result3: {result3}"); // Output: 30
         }
     }
 }
