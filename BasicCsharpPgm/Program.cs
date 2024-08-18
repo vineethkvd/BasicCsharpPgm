@@ -1,5 +1,4 @@
-﻿using DataType;
-namespace BasicCsharpPgm
+﻿namespace BasicCsharpPgm
 {
     class Program
     {
