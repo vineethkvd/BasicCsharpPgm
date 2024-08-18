@@ -1,4 +1,5 @@
 ﻿using Methods;
+using CsharpOperators;
 namespace BasicCsharpPgm
 {
     class Program
@@ -51,6 +52,21 @@ namespace BasicCsharpPgm
             Console.WriteLine($"Result1: {result1}"); // Output: 5
             Console.WriteLine($"Result2: {result2}"); // Output: 15
             Console.WriteLine($"Result3: {result3}"); // Output: 30
+
+
+            // Perform operations and comparisons using different operators
+
+            Operators obj2 = new Operators();
+            string resultAdd = obj2.Operate(10, 5, "+"); // 10 + 5 = 15
+            string resultGreaterThan = obj2.Operate(10, 5, ">"); // 10 > 5 = true
+            string resultEqualTo = obj2.Operate(10, 10, "=="); // 10 == 10 = true
+            string resultNotEqual = obj2.Operate(10, 5, "!="); // 10 != 5 = true
+
+            // Display the results
+            Console.WriteLine($"Addition: {resultAdd}");
+            Console.WriteLine($"Greater Than: {resultGreaterThan}");
+            Console.WriteLine($"Equal To: {resultEqualTo}");
+            Console.WriteLine($"Not Equal: {resultNotEqual}");
         }
     }
 }
