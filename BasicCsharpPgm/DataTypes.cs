@@ -41,6 +41,37 @@ namespace DataType
             bool boolVar = true;
             Console.WriteLine("Boolean: " + boolVar);
         }
+        public void DisplayStringMethods()
+        {
+            string stringVar = "  Hello, Vineeth!  ";
+
+            // 1. Length of the string
+            Console.WriteLine($"Length of the string: {stringVar.Length}");
+            // 2. ToUpper and ToLower
+            Console.WriteLine($"ToUpper: {stringVar.ToUpper()}");
+            Console.WriteLine($"ToLower: {stringVar.ToLower()}");
+
+            // 3. Trim (removes leading and trailing white spaces)
+            Console.WriteLine($"Trimmed: '{stringVar.Trim()}'");
+            // 6. Contains (checks if a substring is present)
+            Console.WriteLine($"Contains 'Vineeth': {stringVar.Contains("Vineeth")}");
+            Console.WriteLine($"Contains 'World': {stringVar.Contains("World")}");
+
+            // 7. IndexOf (finds the index of a substring)
+            Console.WriteLine($"Index of 'Vineeth': {stringVar.IndexOf("Vineeth")}");
+
+            // 8. StartsWith and EndsWith
+            Console.WriteLine($"StartsWith 'Hello': {stringVar.StartsWith("Hello")}");
+            Console.WriteLine($"EndsWith '!': {stringVar.EndsWith("!")}");
+            // 9. Split (splits the string into an array based on a delimiter)
+            string[] splitString = stringVar.Split(',');
+            Console.WriteLine("Split by ',':");
+            foreach (var part in splitString)
+            {
+                Console.WriteLine(part.Trim());
+            }
+
+        }
         public string DisplayResult(int num1,int num2)
         {
             int sum = num1 + num2;
@@ -49,3 +80,4 @@ namespace DataType
 
     }
 }
+
