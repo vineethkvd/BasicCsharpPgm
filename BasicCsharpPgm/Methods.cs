@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 namespace Methods
 {
     class CsharpMethods
@@ -47,7 +48,23 @@ namespace Methods
             else
                 return n * Factorial(n - 1);
         }
-        //async function
+        // Async function
+        public async Task<int> FetchDataAsync()
+        {
+            // Simulate a delay
+            await Task.Delay(2000);
+            return 42; // Example result
+        }
+
+        // Method to demonstrate lambda expression
+        public void DemonstrateLambda()
+        {
+            // Expression lambda that returns the square of a number
+            Func<int, int> square = num => num * num;
+
+            // Passing input to the expression lambda
+            Console.WriteLine("Square of number: " + square(5));
+        }
 
     }
 }
