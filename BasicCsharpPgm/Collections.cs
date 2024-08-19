@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 namespace CsharpCollections
 {
@@ -21,6 +22,29 @@ namespace CsharpCollections
             {
                 Console.WriteLine(number);
             }
+        }
+        // Example of ArrayList
+        //Add any type element
+        public void ArrayListExample()
+        {
+            Console.WriteLine("\nArrayList Example:");
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(1); // Adding an integer
+            arrayList.Add("Two"); // Adding a string
+            arrayList.Add(3.0); // Adding a double
+
+            // Modify an element
+            arrayList[1] = "Modified";
+
+            // Display elements
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item);
+            }
+
+            // Accessing an element with casting
+            int firstElement = (int)arrayList[0];
+            Console.WriteLine($"First element (after casting): {firstElement}");
         }
         public void ListExample()
         {
@@ -115,6 +139,32 @@ namespace CsharpCollections
             {
                 Console.WriteLine(item);
             }
+        }
+
+
+
+        // Example of Hashtable
+        public void HashtableExample()
+        {
+            Console.WriteLine("\nHashtable Example:");
+            Hashtable hashtable = new Hashtable();
+            hashtable.Add("Alice", 30); // Adding key-value pairs
+            hashtable.Add("Bob", 25);
+            hashtable.Add("Charlie", 35);
+            hashtable.Add(1, 35);
+
+            // Modify a value
+            hashtable["Alice"] = 31;
+
+            // Display key-value pairs
+            foreach (DictionaryEntry entry in hashtable)
+            {
+                Console.WriteLine($"{entry.Key}: {entry.Value}");
+            }
+
+            // Accessing a value by key
+            int aliceAge = (int)hashtable["Alice"];
+            Console.WriteLine($"Alice's age: {aliceAge}");
         }
     }
 }
