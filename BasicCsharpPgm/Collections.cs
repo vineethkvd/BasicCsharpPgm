@@ -104,6 +104,7 @@ namespace CsharpCollections
             queue.Enqueue("First");
             queue.Enqueue("Second");
             queue.Enqueue("Third");
+            Console.WriteLine(queue.Peek());
 
             while (queue.Count > 0)
             {
@@ -119,6 +120,8 @@ namespace CsharpCollections
             stack.Push("First");
             stack.Push("Second");
             stack.Push("Third");
+            //get the top value on the stack
+            Console.WriteLine(stack.Peek());
 
             while (stack.Count > 0)
             {
